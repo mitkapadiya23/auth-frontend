@@ -223,7 +223,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
           </button>
         </form>
 
-        <p className="text-sm text-gray-600 mt-4 text-center whitespace-nowrap">
+        <p className="text-sm text-gray-600 mt-4 text-center break-words">
           Submitting the form will accept the{" "}
           <a href="#" className="font-bold text-pink-600">
             Terms & Conditions

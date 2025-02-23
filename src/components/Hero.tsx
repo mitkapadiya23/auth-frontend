@@ -8,7 +8,6 @@ const Hero: React.FC = () => {
         style={{ backgroundImage: "url('/assets/images/hero.gif')" }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
-
         <div className="relative z-10 container mx-auto py-24 text-white grid grid-cols-1 gap-6 text-left">
           <h1 className="text-2xl md:text-4xl font-extrabold leading-tight">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -39,44 +38,43 @@ const Hero: React.FC = () => {
           >
             Lorem ipsum dolor sit amet
           </h1>
-
           <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl border border-gray-300 shadow-[0_10px_25px_rgba(0,0,0,0.3)] text-center p-8 min-h-[250px] flex flex-col justify-center items-center">
+            <div className="group bg-white rounded-xl border border-gray-300 shadow-[0_10px_25px_rgba(0,0,0,0.3)] text-center p-8 min-h-[250px] flex flex-col justify-center items-center transition duration-300 hover:bg-pink-600 active:bg-pink-600">
               <img
                 src="/assets/images/Features_Icon2.png"
                 alt="Feature2"
-                className="w-20 h-20 mb-4"
+                className="w-20 h-20 mb-4 transition duration-300 group-hover:brightness-0 group-hover:invert active:brightness-0 active:invert"
               />
               <p
-                className="font-semibold text-black text-lg"
+                className="font-semibold text-black text-lg transition duration-300 group-hover:text-white active:text-white"
                 style={{ fontFamily: "Arial, sans-serif" }}
               >
                 Lorem <span className="font-black">ipsum</span>
               </p>
             </div>
 
-            <div className="bg-white rounded-xl border border-gray-300 shadow-[0_10px_25px_rgba(0,0,0,0.3)] text-center p-8 min-h-[250px] flex flex-col justify-center items-center">
+            <div className="group bg-white rounded-xl border border-gray-300 shadow-[0_10px_25px_rgba(0,0,0,0.3)] text-center p-8 min-h-[250px] flex flex-col justify-center items-center transition duration-300 hover:bg-pink-600 active:bg-pink-600">
               <img
                 src="/assets/images/Features_Icon1.png"
                 alt="Feature1"
-                className="w-20 h-20 mb-4"
+                className="w-20 h-20 mb-4 transition duration-300 group-hover:brightness-0 group-hover:invert active:brightness-0 active:invert"
               />
               <p
-                className="font-semibold text-black text-lg"
+                className="font-semibold text-black text-lg transition duration-300 group-hover:text-white active:text-white"
                 style={{ fontFamily: "Arial, sans-serif" }}
               >
                 Lorem <span className="font-black">ipsum</span>
               </p>
             </div>
 
-            <div className="bg-white rounded-xl border border-gray-300 shadow-[0_10px_25px_rgba(0,0,0,0.3)] text-center p-8 min-h-[250px] flex flex-col justify-center items-center">
+            <div className="group bg-white rounded-xl border border-gray-300 shadow-[0_10px_25px_rgba(0,0,0,0.3)] text-center p-8 min-h-[250px] flex flex-col justify-center items-center transition duration-300 hover:bg-pink-600 active:bg-pink-600">
               <img
                 src="/assets/images/Features_Icon3.png"
                 alt="Feature3"
-                className="w-20 h-20 mb-4"
+                className="w-20 h-20 mb-4 transition duration-300 group-hover:brightness-0 group-hover:invert active:brightness-0 active:invert"
               />
               <p
-                className="font-semibold text-black text-lg"
+                className="font-semibold text-black text-lg transition duration-300 group-hover:text-white active:text-white"
                 style={{ fontFamily: "Arial, sans-serif" }}
               >
                 Lorem <span className="font-black">ipsum</span>
@@ -100,7 +98,6 @@ const Hero: React.FC = () => {
               sit amet
             </button>
           </div>
-
           <div className="grid grid-cols-1 gap-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-pink-100 p-8 rounded-xl shadow-md text-left">
