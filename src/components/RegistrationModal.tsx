@@ -7,7 +7,7 @@ interface RegistrationModalProps {
 }
 
 const initialFormData = {
-  fullName: "",
+  userName: "",
   contact: "",
   email: "",
   category: "",
@@ -15,7 +15,7 @@ const initialFormData = {
 };
 
 interface FormErrors {
-  fullName?: string;
+  userName?: string;
   contact?: string;
   email?: string;
   category?: string;
@@ -42,8 +42,8 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
   const validateForm = () => {
     const newErrors: FormErrors = {};
-    if (!form.fullName.trim()) {
-      newErrors.fullName = "Full name is required";
+    if (!form.userName.trim()) {
+      newErrors.userName = "Username is required";
     }
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
@@ -79,7 +79,6 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
       const response = await axiosInstance.post("/auth/register", form);
 
       if (response.status === 200 || response.status === 201) {
-        alert("Registration successful!");
         setForm(initialFormData);
         setModal(false);
       } else {
@@ -129,19 +128,17 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
         <form className="space-y-4 text-left" onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
-              <label className="block text-sm font-medium mb-1">
-                Full Name
-              </label>
+              <label className="block text-sm font-medium mb-1">Username</label>
               <input
                 type="text"
-                name="fullName"
-                value={form.fullName}
+                name="userName"
+                value={form.userName}
                 onChange={handleChange}
                 className="w-full p-2 border border-gray-400 rounded-md"
-                placeholder="Full name"
+                placeholder="Username"
               />
-              {errors.fullName && (
-                <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>
+              {errors.userName && (
+                <p className="text-red-500 text-xs mt-1">{errors.userName}</p>
               )}
             </div>
 
