@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
   const [userDetails, setUserDetails] = useState<{
-    fullName: string;
+    userName: string;
     email: string;
     contact: string;
     category: string;
@@ -103,7 +103,7 @@ const Header: React.FC = () => {
                 {userDetails ? (
                   <div className="p-4 space-y-2">
                     <p className="text-sm font-medium">
-                      Name: {userDetails.fullName}
+                      Name: {userDetails.userName}
                     </p>
                     <p className="text-xs text-gray-600">
                       Email: {userDetails.email}
